@@ -13,6 +13,7 @@
 		999D8DA21D5192FA00F5364E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 999D8DA01D5192FA00F5364E /* Main.storyboard */; };
 		999D8DA41D5192FA00F5364E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 999D8DA31D5192FA00F5364E /* Assets.xcassets */; };
 		999D8DA71D5192FA00F5364E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 999D8DA51D5192FA00F5364E /* LaunchScreen.storyboard */; };
+		999D8DB31D51986600F5364E /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 999D8DB21D51986600F5364E /* Student.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		999D8DA31D5192FA00F5364E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		999D8DA61D5192FA00F5364E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		999D8DA81D5192FA00F5364E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		999D8DB11D51986600F5364E /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		999D8DB21D51986600F5364E /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				999D8DA51D5192FA00F5364E /* LaunchScreen.storyboard */,
 				999D8DA81D5192FA00F5364E /* Info.plist */,
 				999D8D971D5192FA00F5364E /* Supporting Files */,
+				999D8DB11D51986600F5364E /* Student.h */,
+				999D8DB21D51986600F5364E /* Student.m */,
 			);
 			path = Day01;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 				999D8D9F1D5192FA00F5364E /* ViewController.m in Sources */,
 				999D8D9C1D5192FA00F5364E /* AppDelegate.m in Sources */,
 				999D8D991D5192FA00F5364E /* main.m in Sources */,
+				999D8DB31D51986600F5364E /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

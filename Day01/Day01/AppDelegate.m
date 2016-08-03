@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Student.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    Student * khuong = [[Student alloc] init];
+
+    [khuong setMarks:9.5 physicsMark:7.0];
+    [khuong calculateAvarageMark];
+     NSLog(@"Khuong's avarage mark is: %f", [khuong getAvarageMark]);
+    [khuong getClassification];
+    [khuong showClassification];
+
     return YES;
 }
 
