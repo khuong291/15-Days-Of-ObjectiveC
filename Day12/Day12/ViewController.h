@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EditInfoViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, EditInfoViewControllerDelegate>
 
+@property (weak, nonatomic) IBOutlet UITableView *tblPeople;
+
+-(IBAction)addNewRecord:(id)sender;
 
 @end
 
