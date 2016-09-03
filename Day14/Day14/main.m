@@ -1,17 +1,15 @@
 //
 //  main.m
-//  BlueLibrary
+//  Day14
 //
-//  Created by Eli Ganem on 31/7/13.
-//  Copyright (c) 2013 Eli Ganem. All rights reserved.
+//  Created by Khuong Pham on 9/3/16.
+//  Copyright © 2016 Fantageek. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-
 #import "AppDelegate.h"
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char * argv[]) {
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
