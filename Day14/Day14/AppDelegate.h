@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "MediaListViewController.h"
-#import "MediaClient.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

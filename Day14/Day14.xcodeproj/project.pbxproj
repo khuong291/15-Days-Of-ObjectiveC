@@ -16,7 +16,6 @@
 		99240A4D1D7A6FB500ABAFCA /* MediaListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99240A4C1D7A6FB500ABAFCA /* MediaListViewController.m */; };
 		99240A521D7A773900ABAFCA /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 99240A511D7A773900ABAFCA /* Media.m */; };
 		99240A551D7A81E400ABAFCA /* MediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99240A541D7A81E400ABAFCA /* MediaCell.m */; };
-		99240A5B1D7AEB0500ABAFCA /* MediaClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 99240A5A1D7AEB0500ABAFCA /* MediaClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +34,6 @@
 		99240A511D7A773900ABAFCA /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Media.m; path = Models/Media.m; sourceTree = "<group>"; };
 		99240A531D7A81E400ABAFCA /* MediaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediaCell.h; path = Views/MediaCell.h; sourceTree = "<group>"; };
 		99240A541D7A81E400ABAFCA /* MediaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediaCell.m; path = Views/MediaCell.m; sourceTree = "<group>"; };
-		99240A591D7AEB0500ABAFCA /* MediaClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediaClient.h; path = Network/MediaClient.h; sourceTree = "<group>"; };
-		99240A5A1D7AEB0500ABAFCA /* MediaClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediaClient.m; path = Network/MediaClient.m; sourceTree = "<group>"; };
 		99240A5C1D7AEB8900ABAFCA /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "../../../Library/Developer/Xcode/DerivedData/Day14-fkfybgfmpobexteqyxgkcltfnxlc/Build/Products/Debug-iphonesimulator/AFNetworking.framework"; sourceTree = "<group>"; };
 		99240A5D1D7AEB8900ABAFCA /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = "../../../Library/Developer/Xcode/DerivedData/Day14-fkfybgfmpobexteqyxgkcltfnxlc/Build/Products/Debug-iphonesimulator/SVProgressHUD.framework"; sourceTree = "<group>"; };
 		A154887EEF5C61E4898D5358 /* Pods-Day14.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Day14.release.xcconfig"; path = "Pods/Target Support Files/Pods-Day14/Pods-Day14.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,7 +82,6 @@
 		99240A2F1D7A6A3500ABAFCA /* Day14 */ = {
 			isa = PBXGroup;
 			children = (
-				99240A4A1D7A6B2D00ABAFCA /* Network */,
 				99240A491D7A6AFD00ABAFCA /* Views */,
 				99240A481D7A6AFB00ABAFCA /* Controllers */,
 				99240A471D7A6AF900ABAFCA /* Models */,
@@ -133,15 +129,6 @@
 				99240A541D7A81E400ABAFCA /* MediaCell.m */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		99240A4A1D7A6B2D00ABAFCA /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				99240A591D7AEB0500ABAFCA /* MediaClient.h */,
-				99240A5A1D7AEB0500ABAFCA /* MediaClient.m */,
-			);
-			name = Network;
 			sourceTree = "<group>";
 		};
 		C92F8DCC052A2013FB4725C5 /* Frameworks */ = {
@@ -276,7 +263,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				99240A4D1D7A6FB500ABAFCA /* MediaListViewController.m in Sources */,
-				99240A5B1D7AEB0500ABAFCA /* MediaClient.m in Sources */,
 				99240A521D7A773900ABAFCA /* Media.m in Sources */,
 				99240A551D7A81E400ABAFCA /* MediaCell.m in Sources */,
 				99240A351D7A6A3500ABAFCA /* AppDelegate.m in Sources */,
@@ -393,6 +379,7 @@
 			baseConfigurationReference = C8F4E5889D46B79D27499308 /* Pods-Day14.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = Day14/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -406,6 +393,8 @@
 			baseConfigurationReference = A154887EEF5C61E4898D5358 /* Pods-Day14.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Day14/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

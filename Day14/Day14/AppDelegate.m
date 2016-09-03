@@ -43,10 +43,6 @@
     tabBarController.tabBar.barTintColor = [[UIColor blackColor]colorWithAlphaComponent:0.5];
     [self.window makeKeyAndVisible];
 
-    [[[MediaClient alloc] init] loadMovies:^(NSArray<Media *> *medias) {
-        NSLog(@"hihihi");
-    }];
-
     return YES;
 }
 
