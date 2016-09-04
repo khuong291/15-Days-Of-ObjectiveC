@@ -11,20 +11,22 @@
 @implementation Media
 
 + (NSMutableArray<Media*> *)parse:(NSDictionary *)json {
-    NSMutableArray<Media*> *mediaList;
+    NSMutableArray<Media*> *mediaList = [[NSMutableArray<Media*> alloc] init];
 
     NSArray<NSDictionary*> *movies = json[@"movies"];
     for (id movie in movies) {
         Media *media = [[Media alloc] init];
 
-        int year = (int) movie[@"year"];
-        media.title = [NSString stringWithFormat:@"%@ %d", (NSString *)movie[@"title"], year];
+        media.title = [NSString stringWithFormat:@"%@", (NSString *)movie[@"title"]];
         NSDictionary *rating = movie[@"ratings"];
         int criticsScore = (int)rating[@"critics_score"];
         int runTime = (int)movie[@"runtime"];
 
         media.synopsis = [NSString stringWithFormat:@"Duration %d p %d\n %@", runTime, criticsScore, (NSString *)movie[@"synopsis"]];
-
+//        media.thumbnailURL = NSURL(string: movie.valueForKeyPath("posters.thumbnail") as! String)!
+//        media.detailURL = NSURL(string: movie.valueForKeyPath("posters.detailed") as! String)!
+        NSDictionary *posters = movie[@"posters"];
+        media.thumbnailURL = [NSURL URLWithString:posters[@"thumbnail"]];
         [mediaList addObject:media];
     }
     return mediaList;

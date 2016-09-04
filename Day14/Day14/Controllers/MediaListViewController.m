@@ -8,12 +8,6 @@
 
 #import "MediaListViewController.h"
 
-@interface MediaListViewController () {
-    NSMutableArray<Media*> *medias;
-}
-
-@end
-
 NSString *movieURLString = @"https://coderschool-movies.herokuapp.com/movies?api_key=xja087zcvxljadsflh214";
 NSString *dvdURLString = @"https://coderschool-movies.herokuapp.com/dvds?api_key=xja087zcvxljadsflh214";
 
@@ -24,18 +18,30 @@ NSString *dvdURLString = @"https://coderschool-movies.herokuapp.com/dvds?api_key
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 
-    [self load:MediaTypeMovie completion:^(NSArray<Media *> *medias) {
-        NSLog(@"hi");
+    [self load:self.mediaType completion:^(NSArray<Media *> *mediaList) {
+        self.medias = mediaList;
+        [self.tableView reloadData];
     }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return self.medias.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MediaCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MediaCell" forIndexPath:indexPath];
-    cell.titleLabel.text = @"hi";
+    Media *media = self.medias[indexPath.row];
+    cell.titleLabel.text = media.title;
+    cell.synopsisLabel.text = media.synopsis;
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSURL *imgURL = media.thumbnailURL;
+        NSData *imageData = [NSData dataWithContentsOfURL:imgURL];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            cell.posterImageView.image = [UIImage imageWithData:imageData];
+        });
+    });
+
     return cell;
 }
 

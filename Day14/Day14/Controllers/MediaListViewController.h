@@ -21,5 +21,7 @@ typedef void (^Completion) (NSArray<Media*> *medias);
 - (void)callAPI:(NSString *)urlString completion:(Completion)completion;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray<Media*> *medias;
+@property (assign) MediaType *mediaType;
 
 @end

@@ -24,6 +24,7 @@
     // Movies
     MediaListViewController *moviesVC = (MediaListViewController *)[storyboard instantiateViewControllerWithIdentifier:@"MediaList"];
     moviesVC.title = @"Movies";
+    moviesVC.mediaType = MediaTypeMovie;
     moviesVC.tabBarItem.image = [[UIImage imageNamed:@"superman"] imageWithRenderingMode:(UIImageRenderingModeAlwaysOriginal)];
     UINavigationController *moviesNC = [[UINavigationController alloc] initWithRootViewController:moviesVC];
     moviesNC.navigationBar.barTintColor = [[UIColor blackColor]colorWithAlphaComponent:0.5];
@@ -33,6 +34,7 @@
     //DVDs
     MediaListViewController *dvdsVC = (MediaListViewController *)[storyboard instantiateViewControllerWithIdentifier:@"MediaList"];
     dvdsVC.title = @"DVDs";
+    dvdsVC.mediaType = MediaTypeDVD;
     dvdsVC.tabBarItem.image = [[UIImage imageNamed:@"hulk"] imageWithRenderingMode:(UIImageRenderingModeAlwaysOriginal)];
     UINavigationController *dvdsNC = [[UINavigationController alloc] initWithRootViewController:dvdsVC];
     dvdsNC.navigationBar.barTintColor = [[UIColor blackColor]colorWithAlphaComponent:0.5];
